@@ -1,0 +1,15 @@
+<h1>Un magnifique formulaire</h1>
+<p>Rentre les données</p>
+
+<form_tag action="/create" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"	>
+  Ton nom : <input type="text" name="username"></br>
+  Ton email : <input type="text" name="email"></br>
+  Une petite bio : <input type="text" name="bio"></br>
+  <input type="submit" value="Envoyer le formulaire">
+</form>
+
+
+
+
+
