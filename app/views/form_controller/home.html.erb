@@ -1,15 +1,48 @@
 <h1>Un magnifique formulaire</h1>
 <p>Rentre les données</p>
-
+<!-- 
 <form_tag action="/create" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"	>
   Ton nom : <input type="text" name="username"></br>
   Ton email : <input type="text" name="email"></br>
   Une petite bio : <input type="text" name="bio"></br>
   <input type="submit" value="Envoyer le formulaire">
+</form> -->
+
+<form action="/create" method="POST">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Ton nom</label>
+    <div class="col-sm-10">
+      <input type="text" name="username" id="username" value="your name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Ton email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword" placeholder="email" name="email">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="bio" class="col-sm-2 col-form-label">Ta bio</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="bio" placeholder="bio" name="bio">
+    </div>
+  </div>
+  <div>
+  	<input type="submit" value="Envoyer le formulaire">
+  </div>
 </form>
 
 
 
+
+<!--  <%= form_for @user, url: {action: "create"} do |f| %>
+ <%= f.text_field :username %>
+ <%= f.text_field :email %>
+ <%= f.text_field :bio %>
+ <%= f.submit "Create" %>
+  
+<% end %> -->
 
 
